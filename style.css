@@ -39,14 +39,14 @@ body::before {
 
 .ipod {
     position: relative;
-    width: 288px;
-    height: 480px;
+    width: 340px;
+    height: 566px;
     background: linear-gradient(145deg, #1a1a2e, #16213e);
-    border-radius: 34px;
+    border-radius: 40px;
     box-shadow:
-        0 24px 48px rgba(0,0,0,0.4),
+        0 28px 57px rgba(0,0,0,0.4),
         inset 0 1px 0 rgba(255,255,255,0.05),
-        inset 0 -2px 6px rgba(0,0,0,0.3);
+        inset 0 -2px 7px rgba(0,0,0,0.3);
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
     background-image:
@@ -58,11 +58,11 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 31px;
-    padding: 0 19px;
-    font-size: 13px;
+    height: 37px;
+    padding: 0 22px;
+    font-size: 15px;
     color: #a0a0a0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     text-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
 
@@ -74,17 +74,17 @@ body::before {
 
 .click-wheel {
     position: absolute;
-    bottom: 29px;
+    bottom: 34px;
     left: 50%;
     transform: translateX(-50%);
-    width: 132px;
-    height: 132px;
+    width: 156px;
+    height: 156px;
     background:
         radial-gradient(circle at center, #2d2d2d 0%, #1a1a2e 70%);
     border-radius: 50%;
     box-shadow:
-        inset 0 2px 5px rgba(0,0,0,0.3),
-        0 2px 7px rgba(0,0,0,0.4),
+        inset 0 2px 6px rgba(0,0,0,0.3),
+        0 2px 8px rgba(0,0,0,0.4),
         0 0 0 1px rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
     overflow: hidden;
@@ -101,9 +101,9 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 108px;
-    height: 108px;
-    border: 1.8px solid rgba(255,255,255,0.1);
+    width: 128px;
+    height: 128px;
+    border: 2px solid rgba(255,255,255,0.1);
     border-radius: 50%;
     background:
         repeating-conic-gradient(
@@ -121,8 +121,8 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 43px;
-    height: 43px;
+    width: 51px;
+    height: 51px;
     background:
         radial-gradient(circle at center, #2d2d2d 0%, #1a1a2e 70%);
     border-radius: 50%;
@@ -137,80 +137,34 @@ body::before {
 }
 
 .center-button {
-    width: 22px;
-    height: 22px;
-    background: linear-gradient(145deg, #4a55a2, #37428a);
-    border-radius: 50%;
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.1),
-        0 1px 2px rgba(0,0,0,0.3);
-    transition: all 0.15s ease;
-}
-.center-button:hover {
-    background: linear-gradient(145deg, #5a65b2, #47529a);
-    transform: scale(1.05);
-}
-.center-button:active {
-    transform: scale(0.95);
-}
-
-.center-button {
-    width: 22px;
-    height: 22px;
-    background: linear-gradient(145deg, #4a55a2, #37428a);
-    border-radius: 50%;
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.1),
-        0 1px 2px rgba(0,0,0,0.3);
-    transition: all 0.15s ease;
-}
-.center-button:hover {
-    background: linear-gradient(145deg, #5a65b2, #47529a);
-    transform: scale(1.05);
-}
-.center-button:active {
-    transform: scale(0.95);
-}
-
-
-.menu-button {
-    background: linear-gradient(145deg, #4a55a2, #37428a);
-    color: #e0e0ff;
-    border: none;
-    border-radius: 50%;
     width: 26px;
     height: 26px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(145deg, #4a55a2, #37428a);
+    border-radius: 50%;
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.1),
         0 1px 2px rgba(0,0,0,0.3);
     transition: all 0.15s ease;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
-.menu-button:hover {
+.center-button:hover {
     background: linear-gradient(145deg, #5a65b2, #47529a);
     transform: scale(1.05);
 }
 
-.menu-button:active {
+.center-button:active {
     transform: scale(0.95);
 }
 
 .screen {
     position: absolute;
-    top: 31px;
+    top: 37px;
     left: 50%;
     transform: translateX(-50%);
-    width: 249px;
-    height: 331px;
+    width: 294px;
+    height: 391px;
     background: #000;
-    border-radius: 24px;
+    border-radius: 28px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.05);
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
@@ -243,12 +197,12 @@ body::before {
 }
 
 .view .header {
-    padding: 19px 24px;
+    padding: 22px 28px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .view .header h2 {
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 600;
     color: #e0e0e0;
     letter-spacing: -0.5px;
@@ -260,20 +214,20 @@ body::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 24px;
+    padding: 0 28px;
     text-align: center;
 }
 
 .message-display {
-    min-height: 72px;
+    min-height: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 29px;
+    margin-bottom: 34px;
 }
 
 .message-text {
-    font-size: 21px;
+    font-size: 25px;
     font-weight: 300;
     line-height: 1.4;
     color: #f0f0f0;
@@ -283,13 +237,13 @@ body::before {
 
 .message-indicators {
     display: flex;
-    gap: 7px;
-    margin-top: 19px;
+    gap: 8px;
+    margin-top: 22px;
 }
 
 .indicator {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: rgba(255,255,255,0.2);
     transition: all 0.2s ease;
@@ -301,31 +255,13 @@ body::before {
     transform: scale(1.2);
 }
 
-.shuffle-view .message-text {
-    font-size: 24px;
-    font-weight: 400;
-    color: #a0a0ff;
-}
-
-.shuffle-view .shuffle-hint {
-    margin-top: 19px;
-    font-size: 29px;
-    opacity: 0.6;
-    transition: opacity 0.2s ease;
-}
-
-.shuffle-view:hover .shuffle-hint,
-.shuffle-view .shuffle-hint:hover {
-    opacity: 1;
-}
-
 .progress-bar {
     position: absolute;
-    bottom: 22px;
+    bottom: 26px;
     left: 50%;
     transform: translateX(-50%);
-    width: 192px;
-    height: 3px;
+    width: 227px;
+    height: 4px;
     background: rgba(255,255,255,0.08);
     border-radius: 2px;
     overflow: hidden;
@@ -341,21 +277,22 @@ body::before {
 
 .nav-controls {
     position: absolute;
-    bottom: 72px;
+    bottom: 85px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 17px;
+    gap: 20px;
+    z-index: 10;
 }
 
 .nav-button {
-    width: 43px;
-    height: 43px;
+    width: 51px;
+    height: 51px;
     border: none;
     border-radius: 50%;
     background: linear-gradient(145deg, #2d2d2d, #1a1a2e);
     color: #e0e0e0;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 300;
     cursor: pointer;
     display: flex;
@@ -382,9 +319,9 @@ body::before {
 }
 
 .nav-button.play {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
+    width: 59px;
+    height: 59px;
+    font-size: 26px;
     background: linear-gradient(145deg, #4a55a2, #37428a);
     color: white;
     box-shadow:
@@ -399,108 +336,94 @@ body::before {
 /* Responsive Adjustments */
 @media (max-width: 480px) {
     .ipod {
-        width: 240px;
-        height: 400px;
+        width: 331px;
+        height: 550px;
     }
 
     .click-wheel {
-        width: 110px;
-        height: 110px;
-        bottom: 24px;
+        width: 151px;
+        height: 151px;
+        bottom: 33px;
     }
 
     .wheel-ring {
-        width: 90px;
-        height: 90px;
+        width: 124px;
+        height: 124px;
     }
 
     .wheel-center {
-        width: 36px;
-        height: 36px;
+        width: 50px;
+        height: 50px;
     }
 
-    .menu-button {
-        width: 22px;
-        height: 22px;
-        font-size: 12px;
+    .center-button {
+        width: 25px;
+        height: 25px;
     }
 
     .screen {
-        width: 208px;
-        height: 276px;
-        top: 26px;
+        top: 35px;
+        width: 286px;
+        height: 380px;
     }
 
     .status-bar {
-        height: 26px;
-        padding: 0 16px;
-        font-size: 11px;
-    }
-
-    .status-bar .battery,
-    .status-bar .date,
-    .status-bar .time {
-        font-size: 11px;
-    }
-
-    .album-art {
-        height: 165px;
-    }
-
-    .track-info {
-        margin-top: 10px;
-    }
-
-    .track-title {
-        font-size: 18px;
-    }
-
-    .artist-name {
+        height: 35px;
+        padding: 0 21px;
         font-size: 14px;
     }
 
-    .progress-bar {
-        width: 160px;
-        bottom: 19px;
+    .view .header {
+        padding: 21px 27px;
     }
 
-    .nav-controls {
-        bottom: 60px;
-        gap: 14px;
+    .view .header h2 {
+        font-size: 21px;
     }
 
-    .nav-button {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
+    .view .content-area {
+        padding: 0 27px;
     }
 
-    .nav-button.play {
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
+    .message-display {
+        min-height: 83px;
+        margin-bottom: 33px;
     }
 
     .message-text {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .message-indicators {
-        margin-top: 16px;
-        gap: 6px;
+        gap: 7px;
+        margin-top: 21px;
     }
 
     .indicator {
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
     }
 
-    .shuffle-view .message-text {
-        font-size: 20px;
+    .progress-bar {
+        width: 221px;
+        bottom: 25px;
+        height: 4px;
     }
 
-    .shuffle-view .shuffle-hint {
-        margin-top: 16px;
-        font-size: 24px;
+    .nav-controls {
+        bottom: 83px;
+        gap: 19px;
+    }
+
+    .nav-button {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .nav-button.play {
+        width: 57px;
+        height: 57px;
+        font-size: 25px;
     }
 }
