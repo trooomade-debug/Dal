@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         views: ['hey', 'fun'],
         viewIndex: 0,
         heyIndex: 0,
-        isRotating: false,
-        lastTouchX: 0,
-        lastTouchY: 0,
-        rotationOffset: 0,
         messages: [
             "Hey you 😊",
             "Made you smile?",
@@ -32,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
-    const wheel = document.querySelector('.click-wheel');
-    const wheelRing = document.querySelector('.wheel-ring');
-    const wheelCenter = document.querySelector('.wheel-center');
-    const centerButton = document.querySelector('.center-button');
     const views = {
         hey: document.getElementById('hey-view'),
         fun: document.getElementById('fun-view')
@@ -56,12 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(updateClock, 1000); // Update every second for live time
         setBatteryLevel();
         showView(state.currentView);
-        setupWheelInteraction();
         prevBtn.addEventListener('click', () => navigateView(-1));
         nextBtn.addEventListener('click', () => navigateView(1));
         playBtn.addEventListener('click', handlePlayButton);
         screen.addEventListener('click', handleScreenClick);
-        centerButton.addEventListener('click', handleCenterClick);
         setInterval(createSparkle, 8000);
     }
 
@@ -142,10 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showMessageForCurrentView();
     }
 
-    function handleCenterClick() {
-        showMessageForCurrentView();
-    }
-
     function handlePlayButton() {
         showMessageForCurrentView();
         animateProgress();
@@ -159,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const newIndex = (state.viewIndex + direction + state.views.length) % state.views.length;
         state.viewIndex = newIndex;
         showView(state.views[newIndex]);
-        rotateWheelToIndex(newIndex);
     }
 
     function animateProgress() {
@@ -167,115 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             progressBar.style.width = '0';
         }, 1500);
-    }
-
-    function setupWheelInteraction() {
-        let isDragging = false;
-        let startAngle = 0;
-        let currentRotation = 0;
-
-        wheel.addEventListener('mousedown', startDrag);
-        wheel.addEventListener('touchstart', startDrag, {passive: true});
-        window.addEventListener('mousemove', drag);
-        window.addEventListener('touchmove', drag, {passive: true});
-        window.addEventListener('mouseup', endDrag);
-        window.addEventListener('touchend', endDrag);
-        window.addEventListener('mouseleave', endDrag);
-
-        function startDrag(e) {
-            isDragging = true;
-            const rect = wheel.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-
-            let clientX, clientY;
-            if (e.type === 'touchstart') {
-                clientX = e.touches[0].clientX;
-                clientY = e.tweets[0].clientY;
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-
-            startAngle = Math.atan2(clientY - centerY, clientX - centerX) * 180 / Math.PI;
-            e.preventDefault();
-        }
-
-        function drag(e) {
-            if (!isDragging) return;
-
-            let clientX, clientY;
-            if (e.type === 'touchmove') {
-                clientX = e.touches[0].clientX;
-                clientY = e.touches[0].clientY;
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-
-            const rect = wheel.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-
-            const currentAngle = Math.atan2(clientY - centerY, clientX - centerX) * 180 / Math.PI;
-            const angleDiff = currentAngle - startAngle;
-
-            currentRotation = (state.rotationOffset + angleDiff) % 360;
-            if (currentRotation < 0) currentRotation += 360;
-
-            wheelRing.style.transform = `rotate(${currentRotation}deg)`;
-
-            const anglePerView = 360 / state.views.length;
-            const newViewIndex = Math.floor((currentRotation + anglePerView/2) % 360 / anglePerView);
-
-            if (newViewIndex !== state.viewIndex) {
-                state.viewIndex = newViewIndex;
-                showView(state.views[newViewIndex]);
-            }
-
-            e.preventDefault();
-        }
-
-        function endDrag() {
-            if (!isDragging) return;
-            isDragging = false;
-            state.rotationOffset = currentRotation;
-            snapToView();
-            e.preventDefault();
-        }
-
-        function snapToView() {
-            const anglePerView = 360 / state.views.length;
-            const snappedAngle = Math.round(state.rotationOffset / anglePerView) * anglePerView;
-            state.rotationOffset = snappedAngle % 360;
-
-            wheelRing.style.transition = 'transform 0.3s ease-out';
-            wheelRing.style.transform = `rotate(${state.rotationOffset}deg)`;
-
-            setTimeout(() => {
-                wheelRing.style.transition = '';
-                const viewIndex = Math.floor((state.rotationOffset + anglePerView/2) % 360 / anglePerView);
-                if (viewIndex !== state.viewIndex) {
-                    state.viewIndex = viewIndex;
-                    showView(state.views[viewIndex]);
-                }
-            }, 300);
-        }
-
-        rotateWheelToIndex(state.viewIndex);
-    }
-
-    function rotateWheelToIndex(index) {
-        const anglePerView = 360 / state.views.length;
-        const targetAngle = index * anglePerView;
-        state.rotationOffset = targetAngle;
-
-        wheelRing.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)';
-        wheelRing.style.transform = `rotate(${targetAngle}deg)`;
-
-        setTimeout(() => {
-            wheelRing.style.transition = '';
-        }, 400);
     }
 
     function createSparkle() {
