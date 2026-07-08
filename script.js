@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function init() {
         updateClock();
-        setInterval(updateClock, 10000);
+        setInterval(updateClock, 1000); // Update every second for live time
         setBatteryLevel();
         showView(state.currentView);
         setupWheelInteraction();
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let clientX, clientY;
             if (e.type === 'touchstart') {
                 clientX = e.touches[0].clientX;
-                clientY = e.touches[0].clientY;
+                clientY = e.tweets[0].clientY;
             } else {
                 clientX = e.clientX;
                 clientY = e.clientY;
