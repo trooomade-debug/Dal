@@ -136,6 +136,43 @@ body::before {
     z-index: 2;
 }
 
+.center-button {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(145deg, #4a55a2, #37428a);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.15s ease;
+}
+.center-button:hover {
+    background: linear-gradient(145deg, #5a65b2, #47529a);
+    transform: scale(1.05);
+}
+.center-button:active {
+    transform: scale(0.95);
+}
+
+.center-button {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(145deg, #4a55a2, #37428a);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.15s ease;
+}
+.center-button:hover {
+    background: linear-gradient(145deg, #5a65b2, #47529a);
+    transform: scale(1.05);
+}
+.center-button:active {
+    transform: scale(0.95);
+}
+
+
 .menu-button {
     background: linear-gradient(145deg, #4a55a2, #37428a);
     color: #e0e0ff;

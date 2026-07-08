@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const wheel = document.querySelector('.click-wheel');
     const wheelRing = document.querySelector('.wheel-ring');
     const wheelCenter = document.querySelector('.wheel-center');
+    const centerButton = document.querySelector('.center-button');
     const views = {
         hey: document.getElementById('hey-view'),
         fun: document.getElementById('fun-view')
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', () => navigateView(1));
         playBtn.addEventListener('click', handlePlayButton);
         screen.addEventListener('click', handleScreenClick);
+        centerButton.addEventListener('click', handleCenterClick);
         setInterval(createSparkle, 8000);
     }
 
@@ -137,6 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const event = window.event; // For IE, but we'll use standard
         // Actually, better to check if click is on buttons
         // We'll just allow it - if they click buttons, it's fine
+        showMessageForCurrentView();
+    }
+
+    function handleCenterClick() {
         showMessageForCurrentView();
     }
 
