@@ -39,28 +39,28 @@ body::before {
 
 .ipod {
     position: relative;
-    width: 240px;
-    height: 400px;
+    width: 288px;
+    height: 480px;
     background: linear-gradient(145deg, #1a1a2e, #16213e);
-    border-radius: 28px;
+    border-radius: 34px;
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.4),
+        0 24px 48px rgba(0,0,0,0.4),
         inset 0 1px 0 rgba(255,255,255,0.05),
-        inset 0 -2px 5px rgba(0,0,0,0.3);
+        inset 0 -2px 6px rgba(0,0,0,0.3);
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
     background-image:
-        radial-gradient(circle at 50% 0, rgba(255,255,255,0.03) 0%, transparent 40%),
-        radial-gradient(circle at 50% 100%, rgba(255,255,255,0.02) 0%, transparent 40%);
+        radial-gradient(circle at 50% 0, rgba(255,255,255,0.03) 0%, transparent 48%),
+        radial-gradient(circle at 50% 100%, rgba(255,255,255,0.02) 0%, transparent 48%);
 }
 
 .status-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 26px;
-    padding: 0 16px;
-    font-size: 11px;
+    height: 31px;
+    padding: 0 19px;
+    font-size: 13px;
     color: #a0a0a0;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 0 rgba(0,0,0,0.3);
@@ -74,17 +74,17 @@ body::before {
 
 .click-wheel {
     position: absolute;
-    bottom: 24px;
+    bottom: 29px;
     left: 50%;
     transform: translateX(-50%);
-    width: 110px;
-    height: 110px;
+    width: 132px;
+    height: 132px;
     background:
         radial-gradient(circle at center, #2d2d2d 0%, #1a1a2e 70%);
     border-radius: 50%;
     box-shadow:
-        inset 0 2px 4px rgba(0,0,0,0.3),
-        0 2px 6px rgba(0,0,0,0.4),
+        inset 0 2px 5px rgba(0,0,0,0.3),
+        0 2px 7px rgba(0,0,0,0.4),
         0 0 0 1px rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
     overflow: hidden;
@@ -101,17 +101,17 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90px;
-    height: 90px;
-    border: 1.5px solid rgba(255,255,255,0.1);
+    width: 108px;
+    height: 108px;
+    border: 1.8px solid rgba(255,255,255,0.1);
     border-radius: 50%;
     background:
         repeating-conic-gradient(
             from 0deg,
             rgba(255,255,255,0.03) 0%,
-            rgba(255,255,255,0.03) 1.5%,
-            transparent 1.5%,
-            transparent 3%
+            rgba(255,255,255,0.03) 1.8%,
+            transparent 1.8%,
+            transparent 3.6%
         );
     pointer-events: none;
 }
@@ -121,8 +121,8 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 36px;
-    height: 36px;
+    width: 43px;
+    height: 43px;
     background:
         radial-gradient(circle at center, #2d2d2d 0%, #1a1a2e 70%);
     border-radius: 50%;
@@ -141,9 +141,9 @@ body::before {
     color: #e0e0ff;
     border: none;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
@@ -167,13 +167,13 @@ body::before {
 
 .screen {
     position: absolute;
-    top: 26px;
+    top: 31px;
     left: 50%;
     transform: translateX(-50%);
-    width: 208px;
-    height: 276px;
+    width: 249px;
+    height: 331px;
     background: #000;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.05);
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
@@ -206,12 +206,12 @@ body::before {
 }
 
 .view .header {
-    padding: 16px 20px;
+    padding: 19px 24px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .view .header h2 {
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     color: #e0e0e0;
     letter-spacing: -0.5px;
@@ -223,20 +223,20 @@ body::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 24px;
     text-align: center;
 }
 
 .message-display {
-    min-height: 60px;
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
 }
 
 .message-text {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 300;
     line-height: 1.4;
     color: #f0f0f0;
@@ -246,13 +246,13 @@ body::before {
 
 .message-indicators {
     display: flex;
-    gap: 6px;
-    margin-top: 16px;
+    gap: 7px;
+    margin-top: 19px;
 }
 
 .indicator {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: rgba(255,255,255,0.2);
     transition: all 0.2s ease;
@@ -264,12 +264,30 @@ body::before {
     transform: scale(1.2);
 }
 
+.shuffle-view .message-text {
+    font-size: 24px;
+    font-weight: 400;
+    color: #a0a0ff;
+}
+
+.shuffle-view .shuffle-hint {
+    margin-top: 19px;
+    font-size: 29px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.shuffle-view:hover .shuffle-hint,
+.shuffle-view .shuffle-hint:hover {
+    opacity: 1;
+}
+
 .progress-bar {
     position: absolute;
-    bottom: 18px;
+    bottom: 22px;
     left: 50%;
     transform: translateX(-50%);
-    width: 160px;
+    width: 192px;
     height: 3px;
     background: rgba(255,255,255,0.08);
     border-radius: 2px;
@@ -286,21 +304,21 @@ body::before {
 
 .nav-controls {
     position: absolute;
-    bottom: 60px;
+    bottom: 72px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 14px;
+    gap: 17px;
 }
 
 .nav-button {
-    width: 36px;
-    height: 36px;
+    width: 43px;
+    height: 43px;
     border: none;
     border-radius: 50%;
     background: linear-gradient(145deg, #2d2d2d, #1a1a2e);
     color: #e0e0e0;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 300;
     cursor: pointer;
     display: flex;
@@ -327,9 +345,9 @@ body::before {
 }
 
 .nav-button.play {
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
     background: linear-gradient(145deg, #4a55a2, #37428a);
     color: white;
     box-shadow:
@@ -341,85 +359,111 @@ body::before {
     background: linear-gradient(145deg, #5a65b2, #47529a);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 480px) {
     .ipod {
-        width: 200px;
-        height: 340px;
+        width: 240px;
+        height: 400px;
     }
 
     .click-wheel {
+        width: 110px;
+        height: 110px;
+        bottom: 24px;
+    }
+
+    .wheel-ring {
         width: 90px;
         height: 90px;
     }
 
-    .wheel-ring {
-        width: 75px;
-        height: 75px;
-    }
-
     .wheel-center {
-        width: 30px;
-        height: 30px;
+        width: 36px;
+        height: 36px;
     }
 
     .menu-button {
-        width: 18px;
-        height: 18px;
-        font-size: 10px;
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
     }
 
     .screen {
-        width: 172px;
-        height: 228px;
-        top: 22px;
-    }
-
-    .nav-controls {
-        bottom: 50px;
-        gap: 12px;
-    }
-
-    .nav-button {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .nav-button.play {
-        width: 35px;
-        height: 35px;
-        font-size: 15px;
-    }
-
-    .progress-bar {
-        width: 130px;
-        bottom: 16px;
+        width: 208px;
+        height: 276px;
+        top: 26px;
     }
 
     .status-bar {
-        height: 22px;
-        font-size: 10px;
-        padding: 0 12px;
+        height: 26px;
+        padding: 0 16px;
+        font-size: 11px;
     }
 
-    .view .header {
-        padding: 12px 16px;
+    .status-bar .battery,
+    .status-bar .date,
+    .status-bar .time {
+        font-size: 11px;
     }
 
-    .view .header h2 {
+    .album-art {
+        height: 165px;
+    }
+
+    .track-info {
+        margin-top: 10px;
+    }
+
+    .track-title {
+        font-size: 18px;
+    }
+
+    .artist-name {
         font-size: 14px;
     }
 
-    .message-text {
+    .progress-bar {
+        width: 160px;
+        bottom: 19px;
+    }
+
+    .nav-controls {
+        bottom: 60px;
+        gap: 14px;
+    }
+
+    .nav-button {
+        width: 36px;
+        height: 36px;
         font-size: 16px;
     }
 
+    .nav-button.play {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .message-text {
+        font-size: 18px;
+    }
+
     .message-indicators {
-        gap: 4px;
+        margin-top: 16px;
+        gap: 6px;
     }
 
     .indicator {
-        width: 5px;
-        height: 5px;
+        width: 6px;
+        height: 6px;
+    }
+
+    .shuffle-view .message-text {
+        font-size: 20px;
+    }
+
+    .shuffle-view .shuffle-hint {
+        margin-top: 16px;
+        font-size: 24px;
     }
 }
