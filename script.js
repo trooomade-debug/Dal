@@ -34,19 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     const messageText = document.querySelector('.message-text');
     const messageIndicators = document.querySelectorAll('.indicator');
-    const progressBar = document.querySelector('.progress');
     const prevBtn = document.querySelector('.nav-button.prev');
     const playBtn = document.querySelector('.nav-button.play');
     const nextBtn = document.querySelector('.nav-button.next');
     const statusTime = document.querySelector('.time');
     const statusDate = document.querySelector('.date');
-    const batteryIcon = document.querySelector('.battery');
     const screen = document.querySelector('.screen');
 
     function init() {
         updateClock();
         setInterval(updateClock, 1000); // Update every second for live time
-        setBatteryLevel();
         showView(state.currentView);
         prevBtn.addEventListener('click', () => navigateView(-1));
         nextBtn.addEventListener('click', () => navigateView(1));
@@ -59,12 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         statusTime.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
         statusDate.textContent = now.toLocaleDateString('en-US', {month: 'short', day: '2-digit'}).toUpperCase();
-    }
-
-    function setBatteryLevel() {
-        const level = Math.floor(Math.random() * 20) + 80;
-        batteryIcon.textContent = level >= 90 ? '&#9789;' : level >= 70 ? '&#9788;' : '&#9787;';
-        setTimeout(setBatteryLevel, 300000);
     }
 
     function showView(viewName) {
@@ -134,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handlePlayButton() {
         showMessageForCurrentView();
-        animateProgress();
         playBtn.style.transform = 'scale(0.95)';
         setTimeout(() => {
             playBtn.style.transform = 'scale(1)';
@@ -145,13 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const newIndex = (state.viewIndex + direction + state.views.length) % state.views.length;
         state.viewIndex = newIndex;
         showView(state.views[newIndex]);
-    }
-
-    function animateProgress() {
-        progressBar.style.width = '100%';
-        setTimeout(() => {
-            progressBar.style.width = '0';
-        }, 1500);
     }
 
     function createSparkle() {
