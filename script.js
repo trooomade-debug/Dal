@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', () => navigateView(1));
         playBtn.addEventListener('click', handlePlayButton);
         screen.addEventListener('click', handleScreenClick);
-        document.querySelector('.menu-button').addEventListener('click', handleMenuClick);
         setInterval(createSparkle, 8000);
     }
 
@@ -138,11 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const event = window.event; // For IE, but we'll use standard
         // Actually, better to check if click is on buttons
         // We'll just allow it - if they click buttons, it's fine
-        showMessageForCurrentView();
-    }
-
-    function handleMenuClick(e) {
-        e.stopPropagation(); // Prevent triggering screen click
         showMessageForCurrentView();
     }
 
